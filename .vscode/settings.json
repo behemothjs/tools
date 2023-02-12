@@ -1,0 +1,5 @@
+{
+  "xo.format.enable": true,
+  "xo.path": "./node_modules/xo/index.js",
+  "xo.runtime": ""
+}
