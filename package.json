@@ -76,8 +76,7 @@
 	"xo": {
 		"ignores": [
 			"build",
-			"test/fixtures",
-			"test/temp",
+			"tests",
 			"coverage"
 		],
 		"rules": {
