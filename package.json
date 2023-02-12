@@ -1,6 +1,6 @@
 {
 	"name": "@behemothjs/tools",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Basic Operation Tools Kit",
 	"main": "src/inddex.ts",
 	"repository": "https://madakaheri%40gmail.com@github.com/behemothjs/tools.git",
@@ -17,7 +17,10 @@
 		"prefix": "run-p build",
 		"fix": "xo --fix",
 		"test": "run-s build xo ava",
-		"version": "standard-version"
+		"version": "standard-version",
+		"release:patch": "standard-version --release-as patch",
+		"release:minor": "standard-version --release-as minor",
+		"release:major": "standard-version --release-as major"
 	},
 	"devDependencies": {
 		"@ava/typescript": "^1.1.1",
