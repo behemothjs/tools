@@ -71,7 +71,7 @@ export class LocalDriver implements StorageDriver {
 	}
 
 	async move(fromFilePath: string, toFilePath: string): Promise<void> {
-		await copyFile(fromFilePath, toFilePath);
+		await this.copy(fromFilePath, toFilePath);
 		await this.delete(fromFilePath);
 	}
 }

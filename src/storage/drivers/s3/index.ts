@@ -54,7 +54,9 @@ export class S3Driver implements StorageDriver, StorageDriverForS3 {
 	}
 
 	async createWriteStream(filePath: string): Promise<Writable> {
-		throw new Error('S3Driver createWriteStream not supported.');
+		throw new Error(
+			`[S3Driver] createWriteStream not supported. filePath=${filePath}`,
+		);
 	}
 
 	async putStream(readStream: Readable, filePath: string): Promise<void> {
@@ -93,9 +95,7 @@ export class S3Driver implements StorageDriver, StorageDriverForS3 {
 			return [];
 		}
 
-		return result.Contents.map(object => object.Key).filter(
-			Boolean,
-		) as string[];
+		return result.Contents.map(object => object.Key).filter(Boolean);
 	}
 
 	async get(filePath: string): Promise<string> {
